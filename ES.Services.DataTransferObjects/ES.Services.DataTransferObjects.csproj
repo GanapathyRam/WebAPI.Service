@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA74D5CB-9E4D-4AF0-8871-B8DCA7409DB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ES.Services.DataTransferObjects</RootNamespace>
+    <AssemblyName>ES.Services.DataTransferObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\Authentication\AuthenticationRequestDto.cs" />
+    <Compile Include="Request\Authentication\RegistrationRequestDto.cs" />
+    <Compile Include="Request\Authentication\RoleRequestDto.cs" />
+    <Compile Include="Request\Authentication\UserActivateRequestDto.cs" />
+    <Compile Include="Request\Authentication\UserPasswordRequestDto.cs" />
+    <Compile Include="Request\Despatch\AddInvoiceRequestDto.cs" />
+    <Compile Include="Request\Despatch\DeleteDcRequestDto.cs" />
+    <Compile Include="Request\Despatch\DeleteInvoiceRequestDto.cs" />
+    <Compile Include="Request\Despatch\DeliveryChallanRequestDto.cs" />
+    <Compile Include="Request\Despatch\GetDcDetailsForInvoiceRequestDto.cs" />
+    <Compile Include="Request\Despatch\GetDcMasterRequestDto.cs" />
+    <Compile Include="Request\Despatch\GetDcNumberForInvoiceRequestDto.cs" />
+    <Compile Include="Request\Despatch\GetDimensionReportRequestDto.cs" />
+    <Compile Include="Request\Despatch\GetInvoiceDetailsRequestDto.cs" />
+    <Compile Include="Request\Despatch\GetInvoiceNumberRequestDto.cs" />
+    <Compile Include="Request\Despatch\GetWOMasterForDcRequestDto.cs" />
+    <Compile Include="Request\Enquiry\DeliveryFollowUpEnquiryOptionRequestDto.cs" />
+    <Compile Include="Request\Enquiry\DespatchEnquiryOptionRequestDto.cs" />
+    <Compile Include="Request\Enquiry\SalesEnquiryOptionRequestDto.cs" />
+    <Compile Include="Request\Masters\AddCompanyMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddDepartmentMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddInstrumentMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddInventoryMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddJigsMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddMachineMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddMaterialMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddOperationMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddParameterMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddPartMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddRateMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddSubcontractProcessMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddSymbolMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddToolsMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddUnitMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddVendorMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddGroupMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\AddVendorTermsMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\DeleteRateMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\DeleteVendorTermsMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetCategoryMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetCompanyMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetInstrumentMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetJigsMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetMachineMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetMaterialMasterListRequestDto.cs" />
+    <Compile Include="Request\Masters\GetMaterialMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetOperationMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetParameterMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetSubcontractProcessMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetSymbolMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetToolsMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetVendorMasterListRequestDto.cs" />
+    <Compile Include="Request\Masters\GetVendorMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\InsertPartMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\GetPartMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateDepartmentMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateGroupMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateInstrumentMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateInventoryMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateJigsMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateMachineMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateMaterialMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateOperationMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateParameterMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdatePartMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateRateMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateSubcontractProcessMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateToolsMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateUnitMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateVendorMasterRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateVendorTermsMasterRequestDto.cs" />
+    <Compile Include="Request\Production\AddJobCardGenerationRequestDto.cs" />
+    <Compile Include="Request\Production\AddProcessCardRequestDto.cs" />
+    <Compile Include="Request\Production\AddProcesssCardCopyRequestDto.cs" />
+    <Compile Include="Request\Production\DeleteJobCardDetailsRequestDto.cs" />
+    <Compile Include="Request\Production\DeleteProcessCardRequestDto.cs" />
+    <Compile Include="Request\Production\GetSequenceNumberRequestDto.cs" />
+    <Compile Include="Request\Production\UpdateJobCardMaintanceRequestDto.cs" />
+    <Compile Include="Request\Quality\UpdateDimensionEntryRequestDto.cs" />
+    <Compile Include="Request\Registration\RegisterUserRequestDto.cs" />
+    <Compile Include="Request\Sales\DeleteWorkOrderRequestDto.cs" />
+    <Compile Include="Request\Sales\GetJobCardEntryReportRequestDto.cs" />
+    <Compile Include="Request\Sales\GetWorkOrderClientSerialNoResponseDto.cs" />
+    <Compile Include="Request\Sales\GetWorkOrderHeatRequest.cs" />
+    <Compile Include="Request\Sales\GetWorkOrderNumberForHeatRequestDto.cs" />
+    <Compile Include="Request\Sales\GetWorkOrderNumberRequestDto.cs" />
+    <Compile Include="Request\Sales\UpdateWorkOrderHeatRequestDto.cs" />
+    <Compile Include="Request\Sales\UpdateWorkOrderRequestDto.cs" />
+    <Compile Include="Request\Sales\WorkOrderTypeRequestDto.cs" />
+    <Compile Include="Request\Sales\WorkOrderRequestDto.cs" />
+    <Compile Include="Request\Masters\UpdateSymbolMasterRequestDto.cs" />
+    <Compile Include="Request\Stores\DeleteGPOutsideReceiptRequestDto.cs" />
+    <Compile Include="Request\Stores\DeleteGPSendingRequestDto.cs" />
+    <Compile Include="Request\Stores\GetGPReceivingRequestDto.cs" />
+    <Compile Include="Request\Stores\GetGPSendingRequestDto.cs" />
+    <Compile Include="Request\Stores\GPOutsideReceiptRequestDto.cs" />
+    <Compile Include="Request\Stores\GPOutsideReturnDetailsGridRequestDto.cs" />
+    <Compile Include="Request\Stores\GPOutsideReturnRequestDto.cs" />
+    <Compile Include="Request\Stores\GPReceivingRequestDto.cs" />
+    <Compile Include="Request\Stores\GPSendingRequestDto.cs" />
+    <Compile Include="Request\Stores\GPTypeMasterRequestDto.cs" />
+    <Compile Include="Request\SubContract\DeleteScSendingRequestDto.cs" />
+    <Compile Include="Request\SubContract\GetScDetailsAndSerialsRequestDto.cs" />
+    <Compile Include="Request\SubContract\GetScReceivingDetailsRequestDto.cs" />
+    <Compile Include="Request\SubContract\SubContractReceivingRequestDto.cs" />
+    <Compile Include="Request\SubContract\SubContractRequestDto.cs" />
+    <Compile Include="Request\Transaction\AddGRNMasterRequestDto.cs" />
+    <Compile Include="Request\Transaction\AddIssueMasterRequestDto.cs" />
+    <Compile Include="Request\Transaction\DeleteGRNRequestDto.cs" />
+    <Compile Include="Request\Transaction\DeleteIssueRequestDto.cs" />
+    <Compile Include="Request\Transaction\DeletePORequestDto.cs" />
+    <Compile Include="Request\Transaction\GetGRNFromVendorCodeRequestDto.cs" />
+    <Compile Include="Request\Transaction\PORequestDto.cs" />
+    <Compile Include="Request\Transaction\UpdateGRNMasterRequestDto.cs" />
+    <Compile Include="Request\Transaction\UpdateIssueMasterRequestDto.cs" />
+    <Compile Include="Request\Transaction\UpdatePORequestDto.cs" />
+    <Compile Include="Response\Authentication\AuthenticationResponseDto.cs" />
+    <Compile Include="Response\Authentication\RegistrationResponseDto.cs" />
+    <Compile Include="Response\Authentication\RoleResponseDto.cs" />
+    <Compile Include="Response\Authentication\UserActivateResponseDto.cs" />
+    <Compile Include="Response\Authentication\UsersResponseDto.cs" />
+    <Compile Include="Response\BaseResponse.cs" />
+    <Compile Include="Response\Despatch\DcTypeList.cs" />
+    <Compile Include="Response\Despatch\DeleteDcResponseDto.cs" />
+    <Compile Include="Response\Despatch\DeleteInvoiceResponseDto.cs" />
+    <Compile Include="Response\Despatch\DeliveryChallanResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetDcDetailsForInvoiceList.cs" />
+    <Compile Include="Response\Despatch\GetDcDetailsForInvoiceResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetDcMasterResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetDcMasterResponseModel.cs" />
+    <Compile Include="Response\Despatch\GetDcNumberForInvoiceList.cs" />
+    <Compile Include="Response\Despatch\GetDcNumberForInvoiceResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetDCNumberResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetDcTypeResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetDimensionReportResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetInvoiceDetailsResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetInvoiceMasterResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetInvoiceNumberResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetSerialNoFromWoNumerWoSerialResponse.cs" />
+    <Compile Include="Response\Despatch\GetWOMasterForDcResponseDto.cs" />
+    <Compile Include="Response\Despatch\GetWOMasterForDcResponseList.cs" />
+    <Compile Include="Response\Despatch\AddInvoiceResponseDto.cs" />
+    <Compile Include="Response\Enquiry\DeliveryFollowUpEnquiryOptionResponseDto.cs" />
+    <Compile Include="Response\Enquiry\DespatchEnquiryOptionResponseDto.cs" />
+    <Compile Include="Response\Enquiry\GetDespatchDetailsEnquiryResponseDto.cs" />
+    <Compile Include="Response\Enquiry\GetSubContractStockEnquiryResponseDto.cs" />
+    <Compile Include="Response\Enquiry\InvoicedEnquiryOptionResponseDto.cs" />
+    <Compile Include="Response\Enquiry\SalesEnquiryOptionResponseDto.cs" />
+    <Compile Include="Response\Enquiry\SerialNoEnquiryOptionResponseDto.cs" />
+    <Compile Include="Response\Enquiry\StockEnquiryOptionResponseDto.cs" />
+    <Compile Include="Response\Masters\AddDepartmentMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddGroupMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddInventoryMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddRateMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddSubcontractProcessMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddSymbolMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddUnitMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddVendorTermsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\DeleteRateMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\DeleteVendorTermsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetDepartmentMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetEmployeeMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetGroupMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetInventoryMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetRateMasterDetailsFromVendorCodeResponseDto.cs" />
+    <Compile Include="Response\Masters\GetRateMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetSubcontractProcessMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetSymbolMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddCompanyMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddJigsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddMachineMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddMaterialMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddOperationMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddParameterMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddToolsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddVendorMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\CategoryMaster.cs" />
+    <Compile Include="Response\Masters\GetCategoryMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetCompanyMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetInstrumentMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetJigsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetMachineMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetMaterialMasterListResponseDto.cs" />
+    <Compile Include="Response\Masters\GetMaterialMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetOperationMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetParameterMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetPartMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetToolsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetUnitMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetVendorMasterListResponseDto.cs" />
+    <Compile Include="Response\Masters\GetVendorMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddInstrumentMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\AddPartMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\GetVendorTermsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\InstrumentMasterList.cs" />
+    <Compile Include="Response\Masters\JigsMaster.cs" />
+    <Compile Include="Response\Masters\MachineMasterList.cs" />
+    <Compile Include="Response\Masters\MaterialMaster.cs" />
+    <Compile Include="Response\Masters\MaterialMasterList.cs" />
+    <Compile Include="Response\Masters\OperationMaster.cs" />
+    <Compile Include="Response\Masters\ParameterMaster.cs" />
+    <Compile Include="Response\Masters\PartMaster.cs" />
+    <Compile Include="Response\Masters\SubcontractProcessMaster.cs" />
+    <Compile Include="Response\Masters\SymbolMaster.cs" />
+    <Compile Include="Response\Masters\ToolsMaster.cs" />
+    <Compile Include="Response\Masters\UpdateDepartmentMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateGroupMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateInstrumentMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateInventoryMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateJigsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateMachineMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateMaterialMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateOperationMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateParameterMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdatePartMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateRateMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateSubcontractProcessMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateSymbolMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateToolsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateUnitMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateVendorMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\UpdateVendorTermsMasterResponseDto.cs" />
+    <Compile Include="Response\Masters\VendorMaster.cs" />
+    <Compile Include="Response\Masters\VendorMasterListForDropDown.cs" />
+    <Compile Include="Response\Production\AddJobCardGenerationResponseDto.cs" />
+    <Compile Include="Response\Production\AddProcessCardResponseDto.cs" />
+    <Compile Include="Response\Production\AddProcesssCardCopyResponseDto.cs" />
+    <Compile Include="Response\Production\DeleteJobCardDetailsResponseDto.cs" />
+    <Compile Include="Response\Production\DeleteProcessCardResponseDto.cs" />
+    <Compile Include="Response\Production\GetJobCardGenerationResponseDto.cs" />
+    <Compile Include="Response\Production\GetJobCardMaintanceResponseDto.cs" />
+    <Compile Include="Response\Production\GetProcessCardResponseDto.cs" />
+    <Compile Include="Response\Production\GetProcesssCardCopyResponseDto.cs" />
+    <Compile Include="Response\Production\GetSequenceNumberResponseDto.cs" />
+    <Compile Include="Response\Production\UpdateJobCardMaintanceResponseDto.cs" />
+    <Compile Include="Response\Quality\GetDimensionEntryResponseDto.cs" />
+    <Compile Include="Response\Quality\UpdateDimensionEntryResponseDto.cs" />
+    <Compile Include="Response\Registration\RegisterUserResponseDto.cs" />
+    <Compile Include="Response\Sales\DeleteWorkOrderResponseDto.cs" />
+    <Compile Include="Response\Sales\GetJobCardEntryReportResponseDto.cs" />
+    <Compile Include="Response\Sales\GetWorkOrderHeatResponseDto.cs" />
+    <Compile Include="Response\Sales\GetWorkOrderNumberForHeatResponseDto.cs" />
+    <Compile Include="Response\Sales\GetWorkOrderNumberResponseDto.cs" />
+    <Compile Include="Response\Sales\GetWorkOrderResponseDto.cs" />
+    <Compile Include="Response\Sales\GetWorkOrderTypeResponseDto.cs" />
+    <Compile Include="Response\Sales\UpdateWorkOrderHeatResponseDto.cs" />
+    <Compile Include="Response\Sales\UpdateWorkOrderResponseDto.cs" />
+    <Compile Include="Response\Sales\WorkOrderResponseDto.cs" />
+    <Compile Include="Response\Sales\WorkOrderTypeList.cs" />
+    <Compile Include="Response\Stores\DeleteGPOutsideReceiptResponseDto.cs" />
+    <Compile Include="Response\Stores\DeleteGPSendingResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPOutsideReceiptNumberResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPOutsideReceiptResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPOutsideReturnNumberResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPOutsideReturnResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPOutsideReturnVendorResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPReceiptVendorResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPReceivedDetailsResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPReceivingResponseDto.cs" />
+    <Compile Include="Response\Stores\GetGPSendingResponseDto.cs" />
+    <Compile Include="Response\Stores\GetUnitMasterResponseDto.cs" />
+    <Compile Include="Response\Stores\GPOutsideReceiptResponseDto.cs" />
+    <Compile Include="Response\Stores\GPOutsideReturnDetailsGridResponseDto.cs" />
+    <Compile Include="Response\Stores\GPOutsideReturnResponseDto.cs" />
+    <Compile Include="Response\Stores\GPReceiptNumberResponseDto.cs" />
+    <Compile Include="Response\Stores\GPReceivingResponseDto.cs" />
+    <Compile Include="Response\Stores\GPSendingNumberResponseDto.cs" />
+    <Compile Include="Response\Stores\GPSendingResponseDto.cs" />
+    <Compile Include="Response\Stores\GPTypeMasterResponseDto.cs" />
+    <Compile Include="Response\Stores\UnitMasterList.cs" />
+    <Compile Include="Response\SubContract\DeleteScSendingResponseDto.cs" />
+    <Compile Include="Response\SubContract\GetDCNumberForScSendingResponseDto.cs" />
+    <Compile Include="Response\SubContract\GetScDetailsAndSerialsResponseDto.cs" />
+    <Compile Include="Response\SubContract\GetScReceivingDetailsAndSerialsResponseDto.cs" />
+    <Compile Include="Response\SubContract\GetScReceivingDetailsResponseDto.cs" />
+    <Compile Include="Response\SubContract\GetScReceivingMasterResponseDto.cs" />
+    <Compile Include="Response\SubContract\GetScReceivingMasterResponseModel.cs" />
+    <Compile Include="Response\SubContract\GetScSendingMasterResponseDto.cs" />
+    <Compile Include="Response\SubContract\GetScSendingMasterResponseModel.cs" />
+    <Compile Include="Response\SubContract\GetSubContractSendingResponseDto.cs" />
+    <Compile Include="Response\SubContract\SubContractReceivingResponseDto.cs" />
+    <Compile Include="Response\SubContract\SubContractResponseDto.cs" />
+    <Compile Include="Response\Transaction\AddGRNMasterResponseDto.cs" />
+    <Compile Include="Response\Transaction\AddIssueMasterResponseDto.cs" />
+    <Compile Include="Response\Transaction\DeleteGRNResponseDto.cs" />
+    <Compile Include="Response\Transaction\DeleteIssueResponseDto.cs" />
+    <Compile Include="Response\Transaction\DeletePOResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetGRNFromVendorCodeResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetGRNMasterAndDetailsResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetGRNSupplierNameResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetGRNNumberResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetIssueDetailsResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetIssuesNumberResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetPoNumberResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetPoResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetPOTypeResponseDto.cs" />
+    <Compile Include="Response\Transaction\GetSavedIssueMasterAndDetailsResponseDto.cs" />
+    <Compile Include="Response\Transaction\POResponseDto.cs" />
+    <Compile Include="Response\Transaction\POTypeList.cs" />
+    <Compile Include="Response\Transaction\UpdateGRNMasterResponseDto.cs" />
+    <Compile Include="Response\Transaction\UpdateIssueMasterResponseDto.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

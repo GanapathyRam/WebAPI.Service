@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D40E88B-2C44-4353-B58E-D6106D70DBEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ES.Services.DataAccess.Model</RootNamespace>
+    <AssemblyName>ES.Services.DataAccess.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SS.Framework.DataAccess">
+      <HintPath>..\References\SS.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandModel\Authentication\CustomUserInformationCommandModel.cs" />
+    <Compile Include="CommandModel\Authentication\RegistrationCM.cs" />
+    <Compile Include="CommandModel\Authentication\UserActivateCM.cs" />
+    <Compile Include="CommandModel\Authentication\UserPasswordCM.cs" />
+    <Compile Include="CommandModel\Despatch\DcDetailSerialCM.cs" />
+    <Compile Include="CommandModel\Despatch\DeleteDcDetailsCM.cs" />
+    <Compile Include="CommandModel\Despatch\DeleteInvoiceCM.cs" />
+    <Compile Include="CommandModel\Despatch\DeliveryChallanCM.cs" />
+    <Compile Include="CommandModel\Despatch\InvoiceDetailCM.cs" />
+    <Compile Include="CommandModel\Despatch\InvoiceDetailSerialCM.cs" />
+    <Compile Include="CommandModel\Masters\AddCompanyMasterCommandModel.cs" />
+    <Compile Include="CommandModel\Masters\AddDepartmentMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddGroupMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddInstrumentMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddInventoryMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddJigsMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddMachineMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddMaterialMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddOperationMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddParameterMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddPartMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddRateMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddSubcontractProcessMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddSymbolMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddToolsMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddUnitMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddVendorMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\AddVendorTermsMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\DeleteRateMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\DeleteVendorTermsMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetCategoryMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetInstrumentMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetJigsMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetMachineMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetMaterialMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetMaterialMasterListCM.cs" />
+    <Compile Include="CommandModel\Masters\GetOperationMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetParameterMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetPartMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetSubcontractProcessMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetSymbolMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetToolsMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetVendorMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\GetVendorMasterListCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateDepartmentMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateGroupMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateInstrumentMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateInventoryMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateJigsMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateMachineMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateMaterialMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateOperationMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateParameterMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdatePartMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateRateMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateSubcontractProcessMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateToolsMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateUnitMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateVendorMasterCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateVendorTermsMasterCM.cs" />
+    <Compile Include="CommandModel\Production\AddJobCardMasterAndDetailsCM.cs" />
+    <Compile Include="CommandModel\Production\DeleteProcessCardCM.cs" />
+    <Compile Include="CommandModel\Production\UpdateJobCardMaintanceCM.cs" />
+    <Compile Include="CommandModel\Production\UpdateProcessCardCM.cs" />
+    <Compile Include="CommandModel\Production\AddProcessCardCM.cs" />
+    <Compile Include="CommandModel\Quality\UpdateDimensioEntryCM.cs" />
+    <Compile Include="CommandModel\Registration\UserInfoCommandModel.cs" />
+    <Compile Include="CommandModel\Sales\DeleteWorkOrderCM.cs" />
+    <Compile Include="CommandModel\Sales\GetWorkOrderDetailsStatusCM.cs" />
+    <Compile Include="CommandModel\Sales\GetWorkOrderHeatDetailsCM.cs" />
+    <Compile Include="CommandModel\Sales\UpdateWorkOrderCM.cs" />
+    <Compile Include="CommandModel\Sales\UpdateWorkOrderHeatCM.cs" />
+    <Compile Include="CommandModel\Sales\WorkOrderCM.cs" />
+    <Compile Include="CommandModel\Sales\WorkOrderDetailsCM.cs" />
+    <Compile Include="CommandModel\Masters\UpdateSymbolMasterCM.cs" />
+    <Compile Include="CommandModel\Stores\DeleteGPOutsideReceiptCM.cs" />
+    <Compile Include="CommandModel\Stores\DeleteGPSendingCM.cs" />
+    <Compile Include="CommandModel\Stores\GPOutsideMasterCM.cs" />
+    <Compile Include="CommandModel\Stores\GPOutsideReceiptDetailsCM.cs" />
+    <Compile Include="CommandModel\Stores\GPOutsideReturnDetailsCM.cs" />
+    <Compile Include="CommandModel\Stores\GPOutsideReturnDetailsGridCM.cs" />
+    <Compile Include="CommandModel\Stores\GPOutsideReturnMasterCM.cs" />
+    <Compile Include="CommandModel\Stores\GPReceivingDetailsCM.cs" />
+    <Compile Include="CommandModel\Stores\GPReceivingMasterInsertCommand.cs" />
+    <Compile Include="CommandModel\Stores\GPSendingCM.cs" />
+    <Compile Include="CommandModel\Stores\GPSendingDetailsCM.cs" />
+    <Compile Include="CommandModel\SubContract\DeleteScDetailsCM.cs" />
+    <Compile Include="CommandModel\SubContract\ScDetailSerialCM.cs" />
+    <Compile Include="CommandModel\SubContract\ScReceivingDetailSerialCM.cs" />
+    <Compile Include="CommandModel\Transaction\AddGRNDetailsCM.cs" />
+    <Compile Include="CommandModel\Transaction\AddGRNMasterCM.cs" />
+    <Compile Include="CommandModel\Transaction\AddIssueDetailsCM.cs" />
+    <Compile Include="CommandModel\Transaction\AddIssueMasterCM.cs" />
+    <Compile Include="CommandModel\Transaction\AddPoDetailsCM.cs" />
+    <Compile Include="CommandModel\Transaction\AddPoMasterCM.cs" />
+    <Compile Include="CommandModel\Transaction\DeleteGRNDetailsCM.cs" />
+    <Compile Include="CommandModel\Transaction\DeleteIssueDetailsCM.cs" />
+    <Compile Include="CommandModel\Transaction\UpdateGRNDetailsCM.cs" />
+    <Compile Include="CommandModel\Transaction\UpdateGRNMasterCM.cs" />
+    <Compile Include="CommandModel\Transaction\UpdateIssueDetailsCM.cs" />
+    <Compile Include="CommandModel\Transaction\UpdateIssueMasterCM.cs" />
+    <Compile Include="CommandModel\Transaction\UpdatePoDetailsCM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryModel\Authentication\CustomUserInformationQueryModel.cs" />
+    <Compile Include="QueryModel\Authentication\RegistrationQM.cs" />
+    <Compile Include="QueryModel\Authentication\RolesQM.cs" />
+    <Compile Include="QueryModel\Authentication\UserActivateQM.cs" />
+    <Compile Include="QueryModel\Authentication\UsersQM.cs" />
+    <Compile Include="QueryModel\Despatch\DcTypeModel.cs" />
+    <Compile Include="QueryModel\Despatch\GetDcDetailsForInvoiceModel.cs" />
+    <Compile Include="QueryModel\Despatch\GetDcDetailsForInvoiceQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetDcMasterModel.cs" />
+    <Compile Include="QueryModel\Despatch\GetDcMasterQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetDcNumberForInvoiceModel.cs" />
+    <Compile Include="QueryModel\Despatch\GetDcNumberForInvoiceQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetDcSerialForInvoiceSerialQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetDcTypeQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetDimensionReportQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetInvoiceDetailsQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetInvoiceMasterQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetSerialNoFromWoNumerWoSerialModel.cs" />
+    <Compile Include="QueryModel\Despatch\GetSerialNoFromWoNumerWoSerialQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetWoMasterAndDetailsFromCustomerCodeTypeModel.cs" />
+    <Compile Include="QueryModel\Despatch\GetWoMasterAndDetailsFromCustomerCodeTypeQM.cs" />
+    <Compile Include="QueryModel\Despatch\GetWOMasterForDcModel.cs" />
+    <Compile Include="QueryModel\Despatch\GetWOMasterForDcQM.cs" />
+    <Compile Include="QueryModel\Enquiry\DeliveryFollowUpOptionModel.cs" />
+    <Compile Include="QueryModel\Enquiry\DeliveryFollowUpOptionQM.cs" />
+    <Compile Include="QueryModel\Enquiry\DespatchEnquiryOptionModel.cs" />
+    <Compile Include="QueryModel\Enquiry\DespatchEnquiryOptionQM.cs" />
+    <Compile Include="QueryModel\Enquiry\GetDespatchDetailsEnquiryModel.cs" />
+    <Compile Include="QueryModel\Enquiry\GetDespatchDetailsEnquiryQM.cs" />
+    <Compile Include="QueryModel\Enquiry\GetStockOptionEnquiryForItemModel.cs" />
+    <Compile Include="QueryModel\Enquiry\GetStockOptionEnquiryForSerialModel.cs" />
+    <Compile Include="QueryModel\Enquiry\GetSubContractStockEnquiryModel.cs" />
+    <Compile Include="QueryModel\Enquiry\GetSubContractStockEnquiryQM.cs" />
+    <Compile Include="QueryModel\Enquiry\InvoicedEnquiryOptionModel.cs" />
+    <Compile Include="QueryModel\Enquiry\InvoicedEnquiryOptionQM.cs" />
+    <Compile Include="QueryModel\Enquiry\SalesEnquiryOptionModel.cs" />
+    <Compile Include="QueryModel\Enquiry\SalesEnquiryOptionQM.cs" />
+    <Compile Include="QueryModel\Enquiry\SerialNoEnquiryOptionModel.cs" />
+    <Compile Include="QueryModel\Enquiry\SerialNoEnquiryOptionQM.cs" />
+    <Compile Include="QueryModel\Enquiry\StockEnquiryOptionQM.cs" />
+    <Compile Include="QueryModel\Masters\AddDepartmentMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddGroupMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddInventoryMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddRateMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddSubcontractProcessMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddUnitMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddVendorTermsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\DeleteRateMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\DeleteVendorTermsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetCompanyMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetDepartmentMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetEmployeeMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetGroupMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetInventoryMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetRateMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetSubcontractProcessMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetUnitMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetVendorTermsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GroupMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\SubcontractProcessMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\UnitMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\UpdateDepartmentMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateGroupMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateInventoryMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateRateMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateSubcontractProcessMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateUnitMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateVendorTermsMasterQM.cs" />
+    <Compile Include="QueryModel\Production\GetJobCardGenerationQM.cs" />
+    <Compile Include="QueryModel\Production\GetJobCardMaintanceQM.cs" />
+    <Compile Include="QueryModel\Production\GetProcessCardDetailsQM.cs" />
+    <Compile Include="QueryModel\Production\GetProcessCardMasterQM.cs" />
+    <Compile Include="QueryModel\Production\GetProcesssCardCopyQM.cs" />
+    <Compile Include="QueryModel\Quality\GetDimensionEntryQM.cs" />
+    <Compile Include="QueryModel\Sales\GetJobCardEntryReportQM.cs" />
+    <Compile Include="QueryModel\Sales\GetWorkOrderClientSerialNoQM.cs" />
+    <Compile Include="QueryModel\Masters\AddCompanyMasterQueryModel.cs" />
+    <Compile Include="QueryModel\Masters\AddInstrumentMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddJigsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddMachineMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddMaterialMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddOperationMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddParameterMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddPartMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddSymbolMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddToolsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\AddVendorMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\CategoryMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\GetCategoryMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetInstrumentMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetJigsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetMachineMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetMaterialMasterListQM.cs" />
+    <Compile Include="QueryModel\Masters\GetMaterialMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetOperationMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetParameterMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetPartMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetSymbolMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetToolsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\GetVendorMasterListQM.cs" />
+    <Compile Include="QueryModel\Masters\GetVendorMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\InstrumentMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\JigsMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\MachineMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\MaterialMasterListForDropDown.cs" />
+    <Compile Include="QueryModel\Masters\MaterialMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\OperationMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\ParameterMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\PartMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\SymbolMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\ToolsMasterModel.cs" />
+    <Compile Include="QueryModel\Masters\UpdateInstrumentMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateJigsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateMachineMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateMaterialMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateOperationMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateParameterMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdatePartMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateSymbolMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateToolsMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\UpdateVendorMasterQM.cs" />
+    <Compile Include="QueryModel\Masters\VendorMasterList.cs" />
+    <Compile Include="QueryModel\Masters\VendorMasterModel.cs" />
+    <Compile Include="QueryModel\Production\GetProcessCardQM.cs" />
+    <Compile Include="QueryModel\Production\GetSequenceNumberModel.cs" />
+    <Compile Include="QueryModel\Production\GetSequenceNumberQM.cs" />
+    <Compile Include="QueryModel\Registration\UserInfoQueryModel.cs" />
+    <Compile Include="QueryModel\Sales\GetWorkOrderDetailsStatusQM.cs" />
+    <Compile Include="QueryModel\Sales\GetWorkOrderHeatDetailsQM.cs" />
+    <Compile Include="QueryModel\Sales\GetWorkOrderModel.cs" />
+    <Compile Include="QueryModel\Sales\GetWorkOrderNumberForHeatQM.cs" />
+    <Compile Include="QueryModel\Sales\GetWorkOrderQM.cs" />
+    <Compile Include="QueryModel\Sales\GetWorkOrderTypeQM.cs" />
+    <Compile Include="QueryModel\Sales\WorkOrderQM.cs" />
+    <Compile Include="QueryModel\Sales\WorkOrderTypeModel.cs" />
+    <Compile Include="QueryModel\Stores\GetGPOutsideReceiptQM.cs" />
+    <Compile Include="QueryModel\Stores\GetGPOutsideReturnQM.cs" />
+    <Compile Include="QueryModel\Stores\GetGPReceiptVendorQM.cs" />
+    <Compile Include="QueryModel\Stores\GetGPReceivedDetailsModel.cs" />
+    <Compile Include="QueryModel\Stores\GetGPReceivedDetailsQM.cs" />
+    <Compile Include="QueryModel\Stores\GetGPReceivingResponseModel.cs" />
+    <Compile Include="QueryModel\Stores\GetGPReceivingResponseQM.cs" />
+    <Compile Include="QueryModel\Stores\GetGPSendingModel.cs" />
+    <Compile Include="QueryModel\Stores\GetGPSendingQM.cs" />
+    <Compile Include="QueryModel\Stores\GetUnitMasterQM.cs" />
+    <Compile Include="QueryModel\Stores\GetUnitMasterQMList.cs" />
+    <Compile Include="QueryModel\Stores\GPOutsideReturnDetailsGridQM.cs" />
+    <Compile Include="QueryModel\Stores\GPOutsideReturnVendorQM.cs" />
+    <Compile Include="QueryModel\Stores\GPTypeMasterQM.cs" />
+    <Compile Include="QueryModel\SubContract\GetScDetailsAndSerialsModel.cs" />
+    <Compile Include="QueryModel\SubContract\GetScDetailsAndSerialsQM.cs" />
+    <Compile Include="QueryModel\SubContract\GetScMasterModel.cs" />
+    <Compile Include="QueryModel\SubContract\GetScMasterQM.cs" />
+    <Compile Include="QueryModel\SubContract\GetScReceivingMasterModel.cs" />
+    <Compile Include="QueryModel\SubContract\GetScReceivingMasterQM.cs" />
+    <Compile Include="QueryModel\SubContract\GetScReceivingDetailsAndSerialsModel.cs" />
+    <Compile Include="QueryModel\SubContract\GetScReceivingDetailsAndSerialsQM.cs" />
+    <Compile Include="QueryModel\SubContract\GetSubContractReceivingResponseModel.cs" />
+    <Compile Include="QueryModel\SubContract\GetSubContractReceivingResponseQM.cs" />
+    <Compile Include="QueryModel\SubContract\GetSubContractSendingResponseModel.cs" />
+    <Compile Include="QueryModel\SubContract\GetSubContractSendingResponseQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetGRNDetailsQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetGRNMasterAndDetailsModel.cs" />
+    <Compile Include="QueryModel\Transaction\GetGRNMasterAndDetailsQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetGRNSupplierNameQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetIssueDetailsQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetIssueMasterAndDetailsModel.cs" />
+    <Compile Include="QueryModel\Transaction\GetIssueMasterAndDetailsQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetPoDetailsSerialNoQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetPoResponseModel.cs" />
+    <Compile Include="QueryModel\Transaction\GetPoResponseQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetPOTypeModel.cs" />
+    <Compile Include="QueryModel\Transaction\GetPOTypeQM.cs" />
+    <Compile Include="QueryModel\Transaction\GetRateMasterDetailsFromVendorCodeQM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CommandModel\Enquiry\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

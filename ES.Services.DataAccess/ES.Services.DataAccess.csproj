@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE16377E-ED28-4D47-A388-983C2470F78C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ES.Services.DataAccess</RootNamespace>
+    <AssemblyName>ES.Services.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SS.Framework.DataAccess">
+      <HintPath>..\References\SS.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Authentication\CustomUserInformationSelectCommand.cs" />
+    <Compile Include="Commands\Authentication\RegistrationInsertCommand.cs" />
+    <Compile Include="Commands\Authentication\RolesSelectCommand.cs" />
+    <Compile Include="Commands\Authentication\UserActivateCommand.cs" />
+    <Compile Include="Commands\Authentication\UserPasswordCommand.cs" />
+    <Compile Include="Commands\Authentication\UsersSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\DcDeleteCommand.cs" />
+    <Compile Include="Commands\Despatch\DcDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Despatch\DcDetailsUpdateCommand.cs" />
+    <Compile Include="Commands\Despatch\DcMasterCommonInsertCommand.cs" />
+    <Compile Include="Commands\Despatch\GetDcDetailsForInvoiceSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetDcMasterSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetDcNumberForInvoiceSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetDCNumberSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\DcSerialInsertCommand.cs" />
+    <Compile Include="Commands\Despatch\GetDcSerialForInvoiceSerialSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetDimensionReportSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetInvoiceDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetInvoiceMasterSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetInvoiceNumberSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetSerialNoForDcSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetWoMasterAndDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\GetWoMasterForDcSelectCommand.cs" />
+    <Compile Include="Commands\Despatch\InvoiceDeleteCommand.cs" />
+    <Compile Include="Commands\Despatch\InvoiceDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Despatch\InvoiceDetailsSerialInsertCommand.cs" />
+    <Compile Include="Commands\Despatch\InvoiceDetailsUpdateCommand.cs" />
+    <Compile Include="Commands\Despatch\InvoiceMasterInsertCommand.cs" />
+    <Compile Include="Commands\Despatch\InvoiceMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetDeliveryFollowUpEnquiryForGridSelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetDeliveryFollowUpEnquirySelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetDespatchDetailsEnquiryForGridSelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetDespatchDetailsEnquirySelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetDespatchEnquirySelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetDespatchEnquirySelectCommandForGrid.cs" />
+    <Compile Include="Commands\Enquiry\GetInvoicedEnquirySelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetInvoicedEnquirySelectCommandForGrid.cs" />
+    <Compile Include="Commands\Enquiry\GetSalesEnquiryForGridSelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetSalesEnquirySelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetSerialNoEnquirySelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetSerialNoEnquirySelectCommandForGrid.cs" />
+    <Compile Include="Commands\Enquiry\GetStockEnquirySelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetStockEnquirySelectCommandForGrid.cs" />
+    <Compile Include="Commands\Enquiry\GetSubContractStockEnquiryForGridSelectCommand.cs" />
+    <Compile Include="Commands\Enquiry\GetSubContractStockEnquirySelectCommand.cs" />
+    <Compile Include="Commands\Masters\CategoryMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\CompanyMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\CompanyMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\CompanyMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\DepartmentMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\DepartmentMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\DepartmentMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\EmployeeMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\GroupMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\GroupMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\GroupMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\InstrumentMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\InstrumentMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\InstrumentMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\InventoryMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\InventoryMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\InventoryMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\JigsMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\JigsMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\JigsMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\MachineMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\MachineMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\MachineMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\MaterialMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\MaterialMasterListSelectCommand.cs" />
+    <Compile Include="Commands\Masters\OperationMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\OperationMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\OperationMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\ParameterMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\ParameterMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\ParameterMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\PartMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\PartMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\PartMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\RateMasterDeleteCommand.cs" />
+    <Compile Include="Commands\Masters\RateMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\RateMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\RateMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\SubcontractProcessMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\SubcontractProcessMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\SubcontractProcessMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\SymbolMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\SymbolMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\SymbolMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\ToolsMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\ToolsMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\ToolsMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\UnitMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\UnitMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\UnitMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\VendorMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\MaterialMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\VendorMasterListSelectCommand.cs" />
+    <Compile Include="Commands\Masters\VendorMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\MaterialMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\VendorMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Masters\VendorTermsMasterDeleteCommand.cs" />
+    <Compile Include="Commands\Masters\VendorTermsMasterInsertCommand.cs" />
+    <Compile Include="Commands\Masters\VendorTermsMasterSelectCommand.cs" />
+    <Compile Include="Commands\Masters\VendorTermsMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Production\AddProcessCardCopyCommand.cs" />
+    <Compile Include="Commands\Production\GetJobCardGenerationSelectCommand.cs" />
+    <Compile Include="Commands\Production\GetJobCardMaintanceSelectCommand.cs" />
+    <Compile Include="Commands\Production\GetProcessCardCopySelectCommand.cs" />
+    <Compile Include="Commands\Production\GetProcessCardDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Production\GetProcessCardMasterSelectCommand.cs" />
+    <Compile Include="Commands\Production\JobCardMaintanceDeleteCommand.cs" />
+    <Compile Include="Commands\Production\JobCardMasterAndDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Production\ProcessCardDeleteCommand.cs" />
+    <Compile Include="Commands\Production\ProcessCardInsertCommand.cs" />
+    <Compile Include="Commands\Production\GetSequenceNumberSelectCommand.cs" />
+    <Compile Include="Commands\Production\GetProcessCardSelectCommand.cs" />
+    <Compile Include="Commands\Production\ProcessCardUpdateCommand.cs" />
+    <Compile Include="Commands\Production\UpdateJobCardMaintanceUpdateCommand.cs" />
+    <Compile Include="Commands\Quality\DimensionEntrySelectCommand.cs" />
+    <Compile Include="Commands\Quality\DimensionEntryUpdateCommand.cs" />
+    <Compile Include="Commands\Registration\UserRegistrationInsertCommand.cs" />
+    <Compile Include="Commands\Despatch\GetDcTypeSelectCommand.cs" />
+    <Compile Include="Commands\Sales\JobCardEntryReportSelectCommand.cs" />
+    <Compile Include="Commands\Sales\UpdateWorkOrderHeatInsertCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderHeatSelectCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderMasterDeleteCommand.cs" />
+    <Compile Include="Commands\Sales\UpdateWorkOrderMasterInsertCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderDetailsStatusSelectCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderMasterInsertCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderMasterCommonInsertCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderNumberClientSerialNoSelectCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderNumberForHeatSelectCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderNumberSelectCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderSelectCommand.cs" />
+    <Compile Include="Commands\Sales\WorkOrderTypeSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GetGPOutsideReceiptNumberSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GetGPOutsideReceiptSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GetGPOutsideReturnVendorSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GetGPReceiptVendorSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GetReceivedDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GetReceivingMasterAndDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GetUnitMasterSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GPOutsideReceiptDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Stores\GPOutsideReceiptMasterInsertCommand.cs" />
+    <Compile Include="Commands\Stores\GPOutsideReturnDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Stores\GPOutsideReturnDetailsGridSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GPOutsideReturnMasterAndDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GPOutsideReturnMasterInsertCommand.cs" />
+    <Compile Include="Commands\Stores\GPOutsideReturnNumberSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GPReceiptNumberSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GPReceivingDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Stores\GPSendingDeleteCommand.cs" />
+    <Compile Include="Commands\Stores\GPSendingDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Stores\GPSendingMasterAndDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GPSendingMasterInsertCommand.cs" />
+    <Compile Include="Commands\Stores\GPSendingNumberSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GPTypeMasterSelectCommand.cs" />
+    <Compile Include="Commands\Stores\GPOutsideReceiptDeleteCommand.cs" />
+    <Compile Include="Commands\SubContract\GetScDetailsAndSerialSelectCommand.cs" />
+    <Compile Include="Commands\SubContract\GetScMasterSelectCommand.cs" />
+    <Compile Include="Commands\SubContract\GetScReceivingDetailsAndSerialSelectCommand.cs" />
+    <Compile Include="Commands\SubContract\GetScReceivingMasterSelectCommand.cs" />
+    <Compile Include="Commands\SubContract\GetSCSendingDCNumberSelectCommand.cs" />
+    <Compile Include="Commands\SubContract\GetSubContractReceivingSelectCommand.cs" />
+    <Compile Include="Commands\SubContract\GetSubContractSendingSelectCommand.cs" />
+    <Compile Include="Commands\SubContract\ScDeleteCommand.cs" />
+    <Compile Include="Commands\SubContract\ScDetailsInsertCommand.cs" />
+    <Compile Include="Commands\SubContract\ScDetailsUpdateCommand.cs" />
+    <Compile Include="Commands\SubContract\ScMasterCommonInsertCommand.cs" />
+    <Compile Include="Commands\SubContract\ScReceivingDetailsInsertCommand.cs" />
+    <Compile Include="Commands\SubContract\ScReceivingMasterCommonInsertCommand.cs" />
+    <Compile Include="Commands\SubContract\ScReceivingSerialInsertCommand.cs" />
+    <Compile Include="Commands\SubContract\ScSerialInsertCommand.cs" />
+    <Compile Include="Commands\Transaction\GetGRNDetailsFromVendorCodeSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\GetGRNMasterAndDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\GetGRNSupplierNameSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\GetIssueDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\GetPoMasterAndDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\GetPOTypeMasterSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\GetRateMasterDetailsFromVendorCode.cs" />
+    <Compile Include="Commands\Transaction\GetSavedIssueMasterAndDetailsSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\GRNDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Transaction\GRNDetailsUpdateCommand.cs" />
+    <Compile Include="Commands\Transaction\GRNMasterAndDetailsDeleteCommand.cs" />
+    <Compile Include="Commands\Transaction\GRNMasterInsertCommand.cs" />
+    <Compile Include="Commands\Transaction\GRNMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Transaction\GRNNumberSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\IssueDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Transaction\IssueDetailsUpdateCommand.cs" />
+    <Compile Include="Commands\Transaction\IssueMasterAndDetailsDeleteCommand.cs" />
+    <Compile Include="Commands\Transaction\IssueMasterInsertCommand.cs" />
+    <Compile Include="Commands\Transaction\IssueMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Transaction\IssuesNumberSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\PoDetailsInsertCommand.cs" />
+    <Compile Include="Commands\Transaction\PoDetailsUpdateCommand.cs" />
+    <Compile Include="Commands\Transaction\PoMasterAndDetailsDeleteCommand.cs" />
+    <Compile Include="Commands\Transaction\PoMasterInsertCommand.cs" />
+    <Compile Include="Commands\Transaction\PoMasterUpdateCommand.cs" />
+    <Compile Include="Commands\Transaction\PoNumberSelectCommand.cs" />
+    <Compile Include="Commands\Transaction\TermsMasterFromCodeSelectCommand.cs" />
+    <Compile Include="DbConnectionProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Authentication\AuthenticateRepository.cs" />
+    <Compile Include="Repositories\Despatch\InvoiceRepository.cs" />
+    <Compile Include="Repositories\Enquiry\EnquiryRepository.cs" />
+    <Compile Include="Repositories\Masters\DepartmentMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\EmployeeMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\GroupMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\InstrumentMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\InventoryMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\MachineMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\ParameterMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\JigsMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\PartMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\RateMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\SubcontractProcessMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\SymbolMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\ToolsMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\OperationMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\CompanyMastersRepository.cs" />
+    <Compile Include="Repositories\Masters\CategoryMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\MaterialMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\UnitMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\VendorMasterRepository.cs" />
+    <Compile Include="Repositories\Masters\VendorTermsMasterRepository.cs" />
+    <Compile Include="Repositories\Production\JobCardGenerationRepository.cs" />
+    <Compile Include="Repositories\Production\ProcessCardRepository.cs" />
+    <Compile Include="Repositories\Quality\DimensionRepository.cs" />
+    <Compile Include="Repositories\Registration\RegistrationRepository.cs" />
+    <Compile Include="Repositories\Despatch\DeliveryChallanRepository.cs" />
+    <Compile Include="Repositories\Sales\WorkOrderRepository.cs" />
+    <Compile Include="Repositories\Stores\GatePassOutsideRepository.cs" />
+    <Compile Include="Repositories\Stores\GatePassRepository.cs" />
+    <Compile Include="Repositories\SubContract\SubContractRepository.cs" />
+    <Compile Include="Repositories\Transaction\TransactionRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ES.Services.DataAccess.Interface\ES.Services.DataAccess.Interface.csproj">
+      <Project>{a01ecce5-08da-418b-9adf-55793301d449}</Project>
+      <Name>ES.Services.DataAccess.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ES.Services.DataAccess.Model\ES.Services.DataAccess.Model.csproj">
+      <Project>{6d40e88b-2c44-4353-b58e-d6106d70dbee}</Project>
+      <Name>ES.Services.DataAccess.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ES.Services.DataTransferObjects\ES.Services.DataTransferObjects.csproj">
+      <Project>{DA74D5CB-9E4D-4AF0-8871-B8DCA7409DB7}</Project>
+      <Name>ES.Services.DataTransferObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
