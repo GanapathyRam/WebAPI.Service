@@ -1,7 +1,9 @@
 ﻿using Castle.DynamicProxy;
 using ES.Services.BusinessLogic.Authentication;
+using ES.Services.BusinessLogic.CDSS;
 using ES.Services.BusinessLogic.Despatch;
 using ES.Services.BusinessLogic.Interface.Authentication;
+using ES.Services.BusinessLogic.Interface.CDSS;
 using ES.Services.BusinessLogic.Interface.Despatch;
 using ES.Services.BusinessLogic.Interface.Masters;
 using ES.Services.BusinessLogic.Interface.Production;
@@ -20,6 +22,7 @@ using ES.Services.BusinessLogic.Stores;
 using ES.Services.BusinessLogic.SubContract;
 using ES.Services.BusinessLogic.Transaction;
 using ES.Services.DataAccess.Interface.Authentication;
+using ES.Services.DataAccess.Interface.CDSS;
 using ES.Services.DataAccess.Interface.Despatch;
 using ES.Services.DataAccess.Interface.Enquiry;
 using ES.Services.DataAccess.Interface.Masters;
@@ -31,6 +34,7 @@ using ES.Services.DataAccess.Interface.Stores;
 using ES.Services.DataAccess.Interface.SubContract;
 using ES.Services.DataAccess.Interface.Transaction;
 using ES.Services.DataAccess.Repositories.Authentication;
+using ES.Services.DataAccess.Repositories.CDSS;
 using ES.Services.DataAccess.Repositories.Despatch;
 using ES.Services.DataAccess.Repositories.Enquiry;
 using ES.Services.DataAccess.Repositories.Masters;
@@ -422,6 +426,19 @@ namespace ES.Shared.Services
                 var transactionInterceptor = new TransactionInterceptor();
                 x.For<IBusinessDimension>().EnrichAllWith(instance => proxyGenerator.CreateInterfaceProxyWithTarget(instance, transactionInterceptor));
             });
+            #endregion
+
+            #region CDSS
+
+            ObjectFactory.Configure(x =>
+            {
+                x.For<IBusinessPOImporting>().Use<BusinessPOImporting>();
+                x.For<IPoImportingRepository>().Use<PoImportingRepository>();
+                var proxyGenerator = new ProxyGenerator();
+                var transactionInterceptor = new TransactionInterceptor();
+                x.For<IBusinessPOImporting>().EnrichAllWith(instance => proxyGenerator.CreateInterfaceProxyWithTarget(instance, transactionInterceptor));
+            });
+
             #endregion
         }
     }

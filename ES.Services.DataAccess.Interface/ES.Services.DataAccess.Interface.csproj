@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\IAuthenticationRepository.cs" />
+    <Compile Include="CDSS\IPoImportingRepository.cs" />
     <Compile Include="Despatch\IDeliveryChallanRepository.cs" />
     <Compile Include="Despatch\IInvoiceRepository.cs" />
     <Compile Include="Enquiry\IEnquiryRepository.cs" />

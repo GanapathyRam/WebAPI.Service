@@ -168,6 +168,7 @@
     <Compile Include="Response\Authentication\UserActivateResponseDto.cs" />
     <Compile Include="Response\Authentication\UsersResponseDto.cs" />
     <Compile Include="Response\BaseResponse.cs" />
+    <Compile Include="Response\CDSS\PoImportResponseDto.cs" />
     <Compile Include="Response\Despatch\DcTypeList.cs" />
     <Compile Include="Response\Despatch\DeleteDcResponseDto.cs" />
     <Compile Include="Response\Despatch\DeleteInvoiceResponseDto.cs" />

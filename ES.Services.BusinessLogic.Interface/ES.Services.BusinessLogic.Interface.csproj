@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\IBusinessAuthentication.cs" />
+    <Compile Include="CDSS\IBusinessPOImporting.cs" />
     <Compile Include="Despatch\IBusinessDeliveryChallan.cs" />
     <Compile Include="Despatch\IBusinessInvoice.cs" />
     <Compile Include="Masters\IBusinessCompanyMaster.cs" />

@@ -329,7 +329,9 @@
     <Compile Include="QueryModel\Transaction\GetRateMasterDetailsFromVendorCodeQM.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CommandModel\CDSS\" />
     <Folder Include="CommandModel\Enquiry\" />
+    <Folder Include="QueryModel\CDSS\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

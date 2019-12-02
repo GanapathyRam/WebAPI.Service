@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Excel">
+      <HintPath>..\..\..\Velan\VelanWeb\VV\bin\Excel.dll</HintPath>
+    </Reference>
     <Reference Include="SS.Framework.Exceptions">
       <HintPath>..\References\SS.Framework.Exceptions.dll</HintPath>
     </Reference>
@@ -40,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\BusinessAuthentication.cs" />
+    <Compile Include="CDSS\BusinessPOImporting.cs" />
     <Compile Include="CommonMessages.cs" />
     <Compile Include="Constant.cs" />
     <Compile Include="Despatch\BusinessDeliveryChallan.cs" />

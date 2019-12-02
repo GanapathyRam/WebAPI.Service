@@ -188,6 +188,7 @@
     <Compile Include="App_Start\RouteConfig2.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Authentication\AuthenticationController.cs" />
+    <Compile Include="Controllers\CDSS\POImportingController.cs" />
     <Compile Include="Controllers\Despatch\DeliveryChallanController.cs" />
     <Compile Include="Controllers\Despatch\InvoiceController.cs" />
     <Compile Include="Controllers\Enquiry\EnquiryController.cs" />

@@ -51,6 +51,9 @@
     <Compile Include="Commands\Authentication\UserActivateCommand.cs" />
     <Compile Include="Commands\Authentication\UserPasswordCommand.cs" />
     <Compile Include="Commands\Authentication\UsersSelectCommand.cs" />
+    <Compile Include="Commands\CDSS\PoImportingDeleteCommand.cs" />
+    <Compile Include="Commands\CDSS\PoImportingInsertCommand.cs" />
+    <Compile Include="Commands\CDSS\PoImportingUpdateCommand.cs" />
     <Compile Include="Commands\Despatch\DcDeleteCommand.cs" />
     <Compile Include="Commands\Despatch\DcDetailsInsertCommand.cs" />
     <Compile Include="Commands\Despatch\DcDetailsUpdateCommand.cs" />
@@ -250,6 +253,7 @@
     <Compile Include="DbConnectionProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Authentication\AuthenticateRepository.cs" />
+    <Compile Include="Repositories\CDSS\PoImportingRepository.cs" />
     <Compile Include="Repositories\Despatch\InvoiceRepository.cs" />
     <Compile Include="Repositories\Enquiry\EnquiryRepository.cs" />
     <Compile Include="Repositories\Masters\DepartmentMasterRepository.cs" />
