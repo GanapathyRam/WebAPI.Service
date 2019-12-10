@@ -38,12 +38,12 @@ namespace ES.Services.BusinessLogic.CDSS
 
             #region Inserting record to excel2 table
 
-            //poImportingRepository.AddPoImporting();
+            poImportingRepository.AddPoImporting();
 
             #endregion
 
             #region Updating the required column into excel2 table
-            //poImportingRepository.UpdatePoImporting();
+            poImportingRepository.UpdatePoImporting();
             #endregion
 
             return response;
@@ -198,8 +198,6 @@ namespace ES.Services.BusinessLogic.CDSS
                     oSqlBulk.ColumnMappings.Add("Material group", "MaterialGroup");
                     oSqlBulk.ColumnMappings.Add("HSN/SAC code", "HSNCode");
                     oSqlBulk.ColumnMappings.Add("HSN/SAC Desp.", "HSNDesc");
-
-
 
                     //oSqlBulk.ColumnMappings.Add("Pos", "L1Qty");
                     //oSqlBulk.ColumnMappings.Add("Pos", "L1Date");

@@ -56,8 +56,6 @@
     <Compile Include="CDSS\BusinessPOImporting.cs" />
     <Compile Include="CommonMessages.cs" />
     <Compile Include="Constant.cs" />
-    <Compile Include="Despatch\BusinessDeliveryChallan.cs" />
-    <Compile Include="Despatch\BusinessInvoice.cs" />
     <Compile Include="Masters\BusinessDepartmentMaster.cs" />
     <Compile Include="Masters\BusinessGroupMaster.cs" />
     <Compile Include="Masters\BusinessInstrumentMaster.cs" />
@@ -76,16 +74,8 @@
     <Compile Include="Masters\BusinessUnitMaster.cs" />
     <Compile Include="Masters\BusinessVendorMaster.cs" />
     <Compile Include="Masters\BusinessVendorTermsMaster.cs" />
-    <Compile Include="Production\BusinessJobCardGeneration.cs" />
-    <Compile Include="Production\BusinessProcessCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quality\BusinessDimension.cs" />
     <Compile Include="Registration\BusinessRegistration.cs" />
-    <Compile Include="Sales\BusinessWorkOrder.cs" />
-    <Compile Include="Stores\BusinessGatePass.cs" />
-    <Compile Include="Stores\BusinessGatePassOutside.cs" />
-    <Compile Include="SubContract\BusinessSubContract.cs" />
-    <Compile Include="Transaction\BusinessTransaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ES.ExceptionAttributes\ES.ExceptionAttributes.csproj">

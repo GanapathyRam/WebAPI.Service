@@ -189,9 +189,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Authentication\AuthenticationController.cs" />
     <Compile Include="Controllers\CDSS\POImportingController.cs" />
-    <Compile Include="Controllers\Despatch\DeliveryChallanController.cs" />
-    <Compile Include="Controllers\Despatch\InvoiceController.cs" />
-    <Compile Include="Controllers\Enquiry\EnquiryController.cs" />
     <Compile Include="Controllers\Masters\CategoryMasterController.cs" />
     <Compile Include="Controllers\Masters\CompanyMasterController.cs" />
     <Compile Include="Controllers\Masters\DepartmentMasterController.cs" />
@@ -212,15 +209,7 @@
     <Compile Include="Controllers\Masters\UnitMasterController.cs" />
     <Compile Include="Controllers\Masters\VendorMasterController.cs" />
     <Compile Include="Controllers\Masters\VendorTermsMasterController.cs" />
-    <Compile Include="Controllers\Production\JobCardGenerationController.cs" />
-    <Compile Include="Controllers\Production\ProcessCardController.cs" />
-    <Compile Include="Controllers\Quality\DimensionEntryController.cs" />
     <Compile Include="Controllers\Registration\RegistrationController.cs" />
-    <Compile Include="Controllers\Stores\GatePassController.cs" />
-    <Compile Include="Controllers\Stores\GatePassOutsideController.cs" />
-    <Compile Include="Controllers\SubContract\SubContractController.cs" />
-    <Compile Include="Controllers\Sales\WorkOrderController.cs" />
-    <Compile Include="Controllers\Transaction\TransactionController.cs" />
     <Compile Include="Filters\AddChallengeOnUnauthorizedResult.cs" />
     <Compile Include="Filters\AuthenticationFailureResult.cs" />
     <Compile Include="Filters\HttpAuthenticationChallengeContextExtensions.cs" />

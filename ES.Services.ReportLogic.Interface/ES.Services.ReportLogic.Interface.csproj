@@ -42,8 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\IReportAuthentication.cs" />
-    <Compile Include="Despatch\IReportDeliveryChallan.cs" />
-    <Compile Include="Despatch\IReportInvoice.cs" />
     <Compile Include="Enquiry\IEnquiryReport.cs" />
     <Compile Include="Masters\IReportCategoryMaster.cs" />
     <Compile Include="Masters\IReportCompanyMaster.cs" />
@@ -65,15 +63,7 @@
     <Compile Include="Masters\IReportUnitMaster.cs" />
     <Compile Include="Masters\IReportVendorMaster.cs" />
     <Compile Include="Masters\IReportVendorTermsMaster.cs" />
-    <Compile Include="Production\IReportJobCardGeneration.cs" />
-    <Compile Include="Production\IReportProcessCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quality\IReportDimension.cs" />
-    <Compile Include="Sales\IReportWorkOrder.cs" />
-    <Compile Include="Stores\IReportGPOutside.cs" />
-    <Compile Include="Stores\IReportGatePass.cs" />
-    <Compile Include="SubContract\IReportSubContract.cs" />
-    <Compile Include="Transaction\IReportTransaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ES.Services.DataTransferObjects\ES.Services.DataTransferObjects.csproj">
