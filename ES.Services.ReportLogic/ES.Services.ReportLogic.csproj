@@ -62,26 +62,6 @@
   <ItemGroup>
     <Compile Include="Authentication\ReportAuthentication.cs" />
     <Compile Include="Enquiry\EnquiryReport.cs" />
-    <Compile Include="Masters\ReportCategoryMaster.cs" />
-    <Compile Include="Masters\ReportCompanyMaster.cs" />
-    <Compile Include="Masters\ReportDepartmentMaster.cs" />
-    <Compile Include="Masters\ReportEmployeeMaster.cs" />
-    <Compile Include="Masters\ReportGroupMaster.cs" />
-    <Compile Include="Masters\ReportInstrumentMaster.cs" />
-    <Compile Include="Masters\ReportInventoryMaster.cs" />
-    <Compile Include="Masters\ReportMachineMaster.cs" />
-    <Compile Include="Masters\ReportParameterMaster.cs" />
-    <Compile Include="Masters\ReportJigsMaster.cs" />
-    <Compile Include="Masters\ReportPartMaster.cs" />
-    <Compile Include="Masters\ReportRateMaster.cs" />
-    <Compile Include="Masters\ReportSubcontractProcessMaster.cs" />
-    <Compile Include="Masters\ReportSymbolMaster.cs" />
-    <Compile Include="Masters\ReportToolsMaster.cs" />
-    <Compile Include="Masters\ReportOperationMaster.cs" />
-    <Compile Include="Masters\ReportMaterialMaster.cs" />
-    <Compile Include="Masters\ReportUnitMaster.cs" />
-    <Compile Include="Masters\ReportVendorMaster.cs" />
-    <Compile Include="Masters\ReportVendorTermsMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CDSS\" />
+    <Folder Include="Masters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -24,16 +24,16 @@ namespace ES.Services.BusinessLogic.CDSS
             this.poImportingRepository = poImportingRepository;
         }
 
-        public PoImportResponseDto PoImporting()
+        public PoImportResponseDto PoImporting(string filePath)
         {
             PoImportResponseDto response = new PoImportResponseDto();
 
             #region Clean up the record from Excel and Excel2 Table
-            poImportingRepository.DeletePoImporting();
+            //poImportingRepository.DeletePoImporting();
             #endregion
 
             #region Import the excel content to excel table
-            ExcelToTable();
+            ExcelToTable(filePath);
             #endregion
 
             #region Inserting record to excel2 table
@@ -49,9 +49,8 @@ namespace ES.Services.BusinessLogic.CDSS
             return response;
         }
 
-        private void ExcelToTable()
+        private void ExcelToTable(string UplodedFilePath)
         {
-            SqlBulkCopy oSqlBulk = null;
             DataSet ds = new DataSet();
 
             try
@@ -64,7 +63,8 @@ namespace ES.Services.BusinessLogic.CDSS
                 {
                     conn.Open();
 
-                    filePath = @"C:\Users\GANAPATHY\Desktop\Excel\Pending Purchase orders (1).xlsx";
+                    //filePath = @"C:\Users\GANAPATHY\Desktop\Excel\Pending Purchase orders (1).xlsx";
+                    filePath = UplodedFilePath;
 
                     var cmd = conn.CreateCommand();
                     cmd.CommandType = CommandType.Text;
@@ -116,105 +116,107 @@ namespace ES.Services.BusinessLogic.CDSS
                 using (SqlConnection con = new SqlConnection(sCon))
                 {
                     con.Open();
-                        
+
                     // FINALLY, LOAD DATA INTO THE DATABASE TABLE.
-                    oSqlBulk = new SqlBulkCopy(con);
-                    oSqlBulk.DestinationTableName = "PendingPurchaseOrderExcel"; // TABLE NAME.
+                    using (var oSqlBulk = new SqlBulkCopy(con))
+                    {
+                        oSqlBulk.DestinationTableName = "PendingPurchaseOrderExcel"; // TABLE NAME.
 
-                    oSqlBulk.ColumnMappings.Add("PO type", "POType");
-                    oSqlBulk.ColumnMappings.Add("PO number", "PurchaseDocument");
-                    oSqlBulk.ColumnMappings.Add("Item no.", "PurchaseDocumentItem");
-                    oSqlBulk.ColumnMappings.Add("Schedule Line", "ScheduleLine");
-                    oSqlBulk.ColumnMappings.Add("PO crd. date", "DocDate");//
-                    oSqlBulk.ColumnMappings.Add("Acc. ast. cat.", "AstCat");
-                    oSqlBulk.ColumnMappings.Add("Vendor code", "VendorCode");
-                    oSqlBulk.ColumnMappings.Add("Vendor name", "VendorName");
-                    oSqlBulk.ColumnMappings.Add("Material code", "Material");
-                    oSqlBulk.ColumnMappings.Add("Material Description", "MaterialDescription");
-                    oSqlBulk.ColumnMappings.Add("PO / Targ Qty", "POQty");
-                    oSqlBulk.ColumnMappings.Add("UOM", "OUN");
-                    oSqlBulk.ColumnMappings.Add("Net Price", "NetPrice");
-                    oSqlBulk.ColumnMappings.Add("Currency", "Currency");
-                    oSqlBulk.ColumnMappings.Add("Exchange rate", "ExchangeRate");
-                    oSqlBulk.ColumnMappings.Add("Scheduled Qty", "ScheduleQty");
-                    oSqlBulk.ColumnMappings.Add("Schedule value(INR)", "ScheduleValue");
-                    oSqlBulk.ColumnMappings.Add("Schedule value in FC", "ScheduleValueFC");
+                        oSqlBulk.ColumnMappings.Add("PO type", "POType");
+                        oSqlBulk.ColumnMappings.Add("PO number", "PurchaseDocument");
+                        oSqlBulk.ColumnMappings.Add("Item no.", "PurchaseDocumentItem");
+                        oSqlBulk.ColumnMappings.Add("Schedule Line", "ScheduleLine");
+                        oSqlBulk.ColumnMappings.Add("PO crd. date", "DocDate");//
+                        oSqlBulk.ColumnMappings.Add("Acc. ast. cat.", "AstCat");
+                        oSqlBulk.ColumnMappings.Add("Vendor code", "VendorCode");
+                        oSqlBulk.ColumnMappings.Add("Vendor name", "VendorName");
+                        oSqlBulk.ColumnMappings.Add("Material code", "Material");
+                        oSqlBulk.ColumnMappings.Add("Material Description", "MaterialDescription");
+                        oSqlBulk.ColumnMappings.Add("PO / Targ Qty", "POQty");
+                        oSqlBulk.ColumnMappings.Add("UOM", "OUN");
+                        oSqlBulk.ColumnMappings.Add("Net Price", "NetPrice");
+                        oSqlBulk.ColumnMappings.Add("Currency", "Currency");
+                        oSqlBulk.ColumnMappings.Add("Exchange rate", "ExchangeRate");
+                        oSqlBulk.ColumnMappings.Add("Scheduled Qty", "ScheduleQty");
+                        oSqlBulk.ColumnMappings.Add("Schedule value(INR)", "ScheduleValue");
+                        oSqlBulk.ColumnMappings.Add("Schedule value in FC", "ScheduleValueFC");
 
-                    oSqlBulk.ColumnMappings.Add("Delivery date", "DeliveryDate");
-                    oSqlBulk.ColumnMappings.Add("Delivered", "DeliveredQty");
-                    oSqlBulk.ColumnMappings.Add("Open Qty", "OpenQty");
-                    oSqlBulk.ColumnMappings.Add("Balance Value (INR)", "BalanceValue");
-                    oSqlBulk.ColumnMappings.Add("Balance Value in FC", "BalanceValueFC");
+                        oSqlBulk.ColumnMappings.Add("Delivery date", "DeliveryDate");
+                        oSqlBulk.ColumnMappings.Add("Delivered", "DeliveredQty");
+                        oSqlBulk.ColumnMappings.Add("Open Qty", "OpenQty");
+                        oSqlBulk.ColumnMappings.Add("Balance Value (INR)", "BalanceValue");
+                        oSqlBulk.ColumnMappings.Add("Balance Value in FC", "BalanceValueFC");
 
-                    oSqlBulk.ColumnMappings.Add("Purchase goup", "PurchaseGroup");
-                    oSqlBulk.ColumnMappings.Add("Purc. group name", "PurchaseGroupName");
-                    oSqlBulk.ColumnMappings.Add("PYT Term", "PYTTerm");
-                    oSqlBulk.ColumnMappings.Add("PYT desc.", "PYTDesc");
-                    oSqlBulk.ColumnMappings.Add("PYT - no. of days", "PYTNod");
-                    oSqlBulk.ColumnMappings.Add("PYT-2 no.of days", "PYT2Nod");
-                    oSqlBulk.ColumnMappings.Add("PYT-3 no.of days", "PYT3Nod");
-                    oSqlBulk.ColumnMappings.Add("Possibe Payment Dt.", "PossiblePaymentDate");
-                    oSqlBulk.ColumnMappings.Add("Drg No.", "DrgNo");
-                    oSqlBulk.ColumnMappings.Add("G/L acct No.", "GLAccountNo");
-                    oSqlBulk.ColumnMappings.Add("G/L acct desc", "GLAccountDesc");
-                    oSqlBulk.ColumnMappings.Add("Incoterms (part 1)", "IncoTerms1");
-                    oSqlBulk.ColumnMappings.Add("Incoterms (part 2)", "IncoTerms2");
-                    oSqlBulk.ColumnMappings.Add("Plant", "Plant");
-                    oSqlBulk.ColumnMappings.Add("Storage Loc.", "StorageLocation");
-                    oSqlBulk.ColumnMappings.Add("Tax code", "TaxCode");
-                    oSqlBulk.ColumnMappings.Add("Material Type", "MaterialType");
-                    oSqlBulk.ColumnMappings.Add("DCI", "DCI");
-                    oSqlBulk.ColumnMappings.Add("GR-IV", "GRIV");
+                        oSqlBulk.ColumnMappings.Add("Purchase goup", "PurchaseGroup");
+                        oSqlBulk.ColumnMappings.Add("Purc. group name", "PurchaseGroupName");
+                        oSqlBulk.ColumnMappings.Add("PYT Term", "PYTTerm");
+                        oSqlBulk.ColumnMappings.Add("PYT desc.", "PYTDesc");
+                        oSqlBulk.ColumnMappings.Add("PYT - no. of days", "PYTNod");
+                        oSqlBulk.ColumnMappings.Add("PYT-2 no.of days", "PYT2Nod");
+                        oSqlBulk.ColumnMappings.Add("PYT-3 no.of days", "PYT3Nod");
+                        oSqlBulk.ColumnMappings.Add("Possibe Payment Dt.", "PossiblePaymentDate");
+                        oSqlBulk.ColumnMappings.Add("Drg No.", "DrgNo");
+                        oSqlBulk.ColumnMappings.Add("G/L acct No.", "GLAccountNo");
+                        oSqlBulk.ColumnMappings.Add("G/L acct desc", "GLAccountDesc");
+                        oSqlBulk.ColumnMappings.Add("Incoterms (part 1)", "IncoTerms1");
+                        oSqlBulk.ColumnMappings.Add("Incoterms (part 2)", "IncoTerms2");
+                        oSqlBulk.ColumnMappings.Add("Plant", "Plant");
+                        oSqlBulk.ColumnMappings.Add("Storage Loc.", "StorageLocation");
+                        oSqlBulk.ColumnMappings.Add("Tax code", "TaxCode");
+                        oSqlBulk.ColumnMappings.Add("Material Type", "MaterialType");
+                        oSqlBulk.ColumnMappings.Add("DCI", "DCI");
+                        oSqlBulk.ColumnMappings.Add("GR-IV", "GRIV");
 
-                    oSqlBulk.ColumnMappings.Add("Under Tol", "UnderTOI");
-                    oSqlBulk.ColumnMappings.Add("Over tol", "OverTOI");
-                    oSqlBulk.ColumnMappings.Add("Shipping inst", "ShippingInstruction");
-                    oSqlBulk.ColumnMappings.Add("Quantity Conv", "QtyConvert");
-                    oSqlBulk.ColumnMappings.Add("Quantity Conv", "QtyConvert2");
-                    oSqlBulk.ColumnMappings.Add("Price ut", "PriceUT");
-                    oSqlBulk.ColumnMappings.Add("Asset", "Asset");
-                    oSqlBulk.ColumnMappings.Add("MRP Cont.", "MRPController");
-                    oSqlBulk.ColumnMappings.Add("Material price determination mode", "MPDM");
-                    oSqlBulk.ColumnMappings.Add("Radiography Test Coverage", "RTCoverage");
-                    oSqlBulk.ColumnMappings.Add("Radiography Test Agent", "RTAgent");
-                    oSqlBulk.ColumnMappings.Add("Impact test requirement", "ImpactTest");
-                    oSqlBulk.ColumnMappings.Add("Component property ID", "ComponentPropertyID");
-                    oSqlBulk.ColumnMappings.Add("Customer project name", "CustomerProjectName");
-                    oSqlBulk.ColumnMappings.Add("Document number", "DocumentNo");
-                    oSqlBulk.ColumnMappings.Add("Document part", "DocumentPart");
-                    oSqlBulk.ColumnMappings.Add("Document version", "DocumentVersion");
+                        oSqlBulk.ColumnMappings.Add("Under Tol", "UnderTOI");
+                        oSqlBulk.ColumnMappings.Add("Over tol", "OverTOI");
+                        oSqlBulk.ColumnMappings.Add("Shipping inst", "ShippingInstruction");
+                        oSqlBulk.ColumnMappings.Add("Quantity Conv", "QtyConvert");
+                        oSqlBulk.ColumnMappings.Add("Quantity Conv", "QtyConvert2");
+                        oSqlBulk.ColumnMappings.Add("Price ut", "PriceUT");
+                        oSqlBulk.ColumnMappings.Add("Asset", "Asset");
+                        oSqlBulk.ColumnMappings.Add("MRP Cont.", "MRPController");
+                        oSqlBulk.ColumnMappings.Add("Material price determination mode", "MPDM");
+                        oSqlBulk.ColumnMappings.Add("Radiography Test Coverage", "RTCoverage");
+                        oSqlBulk.ColumnMappings.Add("Radiography Test Agent", "RTAgent");
+                        oSqlBulk.ColumnMappings.Add("Impact test requirement", "ImpactTest");
+                        oSqlBulk.ColumnMappings.Add("Component property ID", "ComponentPropertyID");
+                        oSqlBulk.ColumnMappings.Add("Customer project name", "CustomerProjectName");
+                        oSqlBulk.ColumnMappings.Add("Document number", "DocumentNo");
+                        oSqlBulk.ColumnMappings.Add("Document part", "DocumentPart");
+                        oSqlBulk.ColumnMappings.Add("Document version", "DocumentVersion");
 
-                    oSqlBulk.ColumnMappings.Add("Industry Std Desc.", "IndustryStdDesc");
-                    oSqlBulk.ColumnMappings.Add("Ext. Material Grp", "ExtMatGroup");
-                    oSqlBulk.ColumnMappings.Add("Product type", "ProductType");
-                    oSqlBulk.ColumnMappings.Add("Document Item Processing Status", "DIPS");
-                    oSqlBulk.ColumnMappings.Add("Sales Document", "SalesDocument");
-                    oSqlBulk.ColumnMappings.Add("Sales order item", "SalesOrderItem");
-                    oSqlBulk.ColumnMappings.Add("CDD", "CDD");
-                    oSqlBulk.ColumnMappings.Add("Shiptocode", "ShipToCode");
-                    oSqlBulk.ColumnMappings.Add("Ship to party name", "ShipToName");
-                    oSqlBulk.ColumnMappings.Add("Release indicator", "ReleaseIndicator");
-                    oSqlBulk.ColumnMappings.Add("Release indicator desc", "ReleaseIndicatorDesc");
-                    oSqlBulk.ColumnMappings.Add("Material group", "MaterialGroup");
-                    oSqlBulk.ColumnMappings.Add("HSN/SAC code", "HSNCode");
-                    oSqlBulk.ColumnMappings.Add("HSN/SAC Desp.", "HSNDesc");
+                        oSqlBulk.ColumnMappings.Add("Industry Std Desc.", "IndustryStdDesc");
+                        oSqlBulk.ColumnMappings.Add("Ext. Material Grp", "ExtMatGroup");
+                        oSqlBulk.ColumnMappings.Add("Product type", "ProductType");
+                        oSqlBulk.ColumnMappings.Add("Document Item Processing Status", "DIPS");
+                        oSqlBulk.ColumnMappings.Add("Sales Document", "SalesDocument");
+                        oSqlBulk.ColumnMappings.Add("Sales order item", "SalesOrderItem");
+                        oSqlBulk.ColumnMappings.Add("CDD", "CDD");
+                        oSqlBulk.ColumnMappings.Add("Shiptocode", "ShipToCode");
+                        oSqlBulk.ColumnMappings.Add("Ship to party name", "ShipToName");
+                        oSqlBulk.ColumnMappings.Add("Release indicator", "ReleaseIndicator");
+                        oSqlBulk.ColumnMappings.Add("Release indicator desc", "ReleaseIndicatorDesc");
+                        oSqlBulk.ColumnMappings.Add("Material group", "MaterialGroup");
+                        oSqlBulk.ColumnMappings.Add("HSN/SAC code", "HSNCode");
+                        oSqlBulk.ColumnMappings.Add("HSN/SAC Desp.", "HSNDesc");
 
-                    //oSqlBulk.ColumnMappings.Add("Pos", "L1Qty");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "L1Date");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "L2Qty");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "L1Qty");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "L1Date");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "L2Qty");
 
-                    //oSqlBulk.ColumnMappings.Add("Pos", "L2Date");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "L3Qty");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "L3Date");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "SupplierRemarks");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "LiveOrder");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "Urgent");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "OANumber");
-                    //oSqlBulk.ColumnMappings.Add("Pos", "StatusCode");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "L2Date");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "L3Qty");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "L3Date");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "SupplierRemarks");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "LiveOrder");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "Urgent");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "OANumber");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "StatusCode");
 
-                    //oSqlBulk.ColumnMappings.Add("Pos", "CreatedDateTime");
+                        //oSqlBulk.ColumnMappings.Add("Pos", "CreatedDateTime");
 
-                    oSqlBulk.WriteToServer(dataTable);
+                        oSqlBulk.WriteToServer(dataTable);
+                    }
                 }
 
             }

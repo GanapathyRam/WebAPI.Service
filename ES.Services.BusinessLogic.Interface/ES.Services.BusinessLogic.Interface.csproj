@@ -43,24 +43,6 @@
   <ItemGroup>
     <Compile Include="Authentication\IBusinessAuthentication.cs" />
     <Compile Include="CDSS\IBusinessPOImporting.cs" />
-    <Compile Include="Masters\IBusinessCompanyMaster.cs" />
-    <Compile Include="Masters\IBusinessDepartmentMaster.cs" />
-    <Compile Include="Masters\IBusinessGroupMaster.cs" />
-    <Compile Include="Masters\IBusinessInstrumentMaster.cs" />
-    <Compile Include="Masters\IBusinessInventoryMaster.cs" />
-    <Compile Include="Masters\IBusinessJigsMaster.cs.cs" />
-    <Compile Include="Masters\IBusinessMachineMaster.cs" />
-    <Compile Include="Masters\IBusinessMaterialMaster.cs" />
-    <Compile Include="Masters\IBusinessOperationMaster.cs" />
-    <Compile Include="Masters\IBusinessPartMaster.cs" />
-    <Compile Include="Masters\IBusinessRateMaster.cs" />
-    <Compile Include="Masters\IBusinessSubcontractProcessMaster.cs" />
-    <Compile Include="Masters\IBusinessSymbolMaster.cs" />
-    <Compile Include="Masters\IBusinessToolsMaster.cs" />
-    <Compile Include="Masters\IBusinessUnitMaster.cs" />
-    <Compile Include="Masters\IBusinessVendorMaster.cs" />
-    <Compile Include="Masters\IBusinessParameterMaster.cs" />
-    <Compile Include="Masters\IBusinessVendorTermsMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\IBusinessRegistration.cs" />
   </ItemGroup>
@@ -70,7 +52,9 @@
       <Name>ES.Services.DataTransferObjects</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Masters\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

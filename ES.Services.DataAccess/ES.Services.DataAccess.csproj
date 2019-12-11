@@ -93,66 +93,6 @@
     <Compile Include="Commands\Enquiry\GetStockEnquirySelectCommandForGrid.cs" />
     <Compile Include="Commands\Enquiry\GetSubContractStockEnquiryForGridSelectCommand.cs" />
     <Compile Include="Commands\Enquiry\GetSubContractStockEnquirySelectCommand.cs" />
-    <Compile Include="Commands\Masters\CategoryMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\CompanyMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\CompanyMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\CompanyMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\DepartmentMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\DepartmentMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\DepartmentMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\EmployeeMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\GroupMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\GroupMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\GroupMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\InstrumentMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\InstrumentMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\InstrumentMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\InventoryMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\InventoryMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\InventoryMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\JigsMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\JigsMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\JigsMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\MachineMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\MachineMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\MachineMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\MaterialMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\MaterialMasterListSelectCommand.cs" />
-    <Compile Include="Commands\Masters\OperationMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\OperationMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\OperationMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\ParameterMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\ParameterMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\ParameterMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\PartMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\PartMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\PartMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\RateMasterDeleteCommand.cs" />
-    <Compile Include="Commands\Masters\RateMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\RateMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\RateMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\SubcontractProcessMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\SubcontractProcessMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\SubcontractProcessMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\SymbolMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\SymbolMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\SymbolMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\ToolsMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\ToolsMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\ToolsMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\UnitMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\UnitMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\UnitMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\VendorMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\MaterialMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\VendorMasterListSelectCommand.cs" />
-    <Compile Include="Commands\Masters\VendorMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\MaterialMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\VendorMasterUpdateCommand.cs" />
-    <Compile Include="Commands\Masters\VendorTermsMasterDeleteCommand.cs" />
-    <Compile Include="Commands\Masters\VendorTermsMasterInsertCommand.cs" />
-    <Compile Include="Commands\Masters\VendorTermsMasterSelectCommand.cs" />
-    <Compile Include="Commands\Masters\VendorTermsMasterUpdateCommand.cs" />
     <Compile Include="Commands\Registration\UserRegistrationInsertCommand.cs" />
     <Compile Include="Commands\Despatch\GetDcTypeSelectCommand.cs" />
     <Compile Include="DbConnectionProvider.cs" />
@@ -160,26 +100,6 @@
     <Compile Include="Repositories\Authentication\AuthenticateRepository.cs" />
     <Compile Include="Repositories\CDSS\PoImportingRepository.cs" />
     <Compile Include="Repositories\Enquiry\EnquiryRepository.cs" />
-    <Compile Include="Repositories\Masters\DepartmentMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\EmployeeMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\GroupMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\InstrumentMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\InventoryMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\MachineMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\ParameterMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\JigsMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\PartMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\RateMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\SubcontractProcessMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\SymbolMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\ToolsMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\OperationMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\CompanyMastersRepository.cs" />
-    <Compile Include="Repositories\Masters\CategoryMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\MaterialMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\UnitMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\VendorMasterRepository.cs" />
-    <Compile Include="Repositories\Masters\VendorTermsMasterRepository.cs" />
     <Compile Include="Repositories\Registration\RegistrationRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -196,7 +116,10 @@
       <Name>ES.Services.DataTransferObjects</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Commands\Masters\" />
+    <Folder Include="Repositories\Masters\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>

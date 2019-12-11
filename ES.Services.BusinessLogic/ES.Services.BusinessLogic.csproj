@@ -56,24 +56,6 @@
     <Compile Include="CDSS\BusinessPOImporting.cs" />
     <Compile Include="CommonMessages.cs" />
     <Compile Include="Constant.cs" />
-    <Compile Include="Masters\BusinessDepartmentMaster.cs" />
-    <Compile Include="Masters\BusinessGroupMaster.cs" />
-    <Compile Include="Masters\BusinessInstrumentMaster.cs" />
-    <Compile Include="Masters\BusinessInventoryMaster.cs" />
-    <Compile Include="Masters\BusinessMachineMaster.cs" />
-    <Compile Include="Masters\BusinessParameterMaster.cs" />
-    <Compile Include="Masters\BusinessJigsMaster.cs" />
-    <Compile Include="Masters\BusinessPartMaster.cs" />
-    <Compile Include="Masters\BusinessRateMaster.cs" />
-    <Compile Include="Masters\BusinessSubcontractProcessMaster.cs" />
-    <Compile Include="Masters\BusinessSymbolMaster.cs" />
-    <Compile Include="Masters\BusinessToolsMaster.cs" />
-    <Compile Include="Masters\BusinessOperationMaster.cs" />
-    <Compile Include="Masters\BusinessMaterialMaster.cs" />
-    <Compile Include="Masters\BusinessCompanyMaster.cs" />
-    <Compile Include="Masters\BusinessUnitMaster.cs" />
-    <Compile Include="Masters\BusinessVendorMaster.cs" />
-    <Compile Include="Masters\BusinessVendorTermsMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\BusinessRegistration.cs" />
   </ItemGroup>
@@ -107,7 +89,9 @@
       <Name>ES.Services.ReportLogic.Interface</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Masters\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -54,60 +54,7 @@
     <Compile Include="Request\Enquiry\DeliveryFollowUpEnquiryOptionRequestDto.cs" />
     <Compile Include="Request\Enquiry\DespatchEnquiryOptionRequestDto.cs" />
     <Compile Include="Request\Enquiry\SalesEnquiryOptionRequestDto.cs" />
-    <Compile Include="Request\Masters\AddCompanyMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddDepartmentMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddInstrumentMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddInventoryMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddJigsMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddMachineMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddMaterialMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddOperationMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddParameterMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddPartMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddRateMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddSubcontractProcessMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddSymbolMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddToolsMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddUnitMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddVendorMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddGroupMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\AddVendorTermsMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\DeleteRateMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\DeleteVendorTermsMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetCategoryMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetCompanyMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetInstrumentMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetJigsMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetMachineMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetMaterialMasterListRequestDto.cs" />
-    <Compile Include="Request\Masters\GetMaterialMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetOperationMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetParameterMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetSubcontractProcessMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetSymbolMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetToolsMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetVendorMasterListRequestDto.cs" />
-    <Compile Include="Request\Masters\GetVendorMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\InsertPartMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\GetPartMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateDepartmentMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateGroupMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateInstrumentMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateInventoryMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateJigsMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateMachineMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateMaterialMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateOperationMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateParameterMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdatePartMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateRateMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateSubcontractProcessMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateToolsMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateUnitMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateVendorMasterRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateVendorTermsMasterRequestDto.cs" />
     <Compile Include="Request\Registration\RegisterUserRequestDto.cs" />
-    <Compile Include="Request\Masters\UpdateSymbolMasterRequestDto.cs" />
     <Compile Include="Response\Authentication\AuthenticationResponseDto.cs" />
     <Compile Include="Response\Authentication\RegistrationResponseDto.cs" />
     <Compile Include="Response\Authentication\RoleResponseDto.cs" />
@@ -210,7 +157,9 @@
     <Compile Include="Response\Sales\WorkOrderResponseDto.cs" />
     <Compile Include="Response\Sales\WorkOrderTypeList.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Request\Masters\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

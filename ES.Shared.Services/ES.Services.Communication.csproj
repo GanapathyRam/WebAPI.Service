@@ -189,26 +189,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Authentication\AuthenticationController.cs" />
     <Compile Include="Controllers\CDSS\POImportingController.cs" />
-    <Compile Include="Controllers\Masters\CategoryMasterController.cs" />
-    <Compile Include="Controllers\Masters\CompanyMasterController.cs" />
-    <Compile Include="Controllers\Masters\DepartmentMasterController.cs" />
-    <Compile Include="Controllers\Masters\EmployeeMasterController.cs" />
-    <Compile Include="Controllers\Masters\GroupMasterController.cs" />
-    <Compile Include="Controllers\Masters\InstrumentMasterController.cs" />
-    <Compile Include="Controllers\Masters\InventoryMasterController.cs" />
-    <Compile Include="Controllers\Masters\JigsMasterController.cs" />
-    <Compile Include="Controllers\Masters\MachineMasterController.cs" />
-    <Compile Include="Controllers\Masters\MaterialMasterController.cs" />
-    <Compile Include="Controllers\Masters\OperationMasterController.cs" />
-    <Compile Include="Controllers\Masters\ParameterMasterController.cs" />
-    <Compile Include="Controllers\Masters\PartMasterController.cs" />
-    <Compile Include="Controllers\Masters\RateMasterController.cs" />
-    <Compile Include="Controllers\Masters\SubcontractProcessMasterController.cs" />
-    <Compile Include="Controllers\Masters\SymbolMasterController.cs" />
-    <Compile Include="Controllers\Masters\ToolsMasterController.cs" />
-    <Compile Include="Controllers\Masters\UnitMasterController.cs" />
-    <Compile Include="Controllers\Masters\VendorMasterController.cs" />
-    <Compile Include="Controllers\Masters\VendorTermsMasterController.cs" />
     <Compile Include="Controllers\Registration\RegistrationController.cs" />
     <Compile Include="Filters\AddChallengeOnUnauthorizedResult.cs" />
     <Compile Include="Filters\AuthenticationFailureResult.cs" />
@@ -242,6 +222,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\EnquiryReports\" />
+    <Folder Include="Controllers\Masters\" />
     <Folder Include="Models\" />
     <Folder Include="Views\SubcontractProcessMaster\" />
     <Folder Include="Views\VendorMaster\" />

@@ -9,6 +9,6 @@ namespace ES.Services.BusinessLogic.Interface.CDSS
 {
     public interface IBusinessPOImporting
     {
-        PoImportResponseDto PoImporting();
+        PoImportResponseDto PoImporting(string filePath);
     }
 }

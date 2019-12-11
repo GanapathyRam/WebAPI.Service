@@ -1,5 +1,6 @@
 ﻿using ES.Services.BusinessLogic.Interface.CDSS;
 using ES.Services.DataTransferObjects.Response.CDSS;
+using ES.Shared.Services.Filters;
 using SS.Framework.Exceptions;
 using StructureMap;
 using System;
@@ -11,6 +12,7 @@ using System.Web.Http;
 
 namespace ES.Shared.Services.Controllers.CDSS
 {
+    [JwtAuthenticationAttribute]
     public class POImportingController : ApiController, IBusinessPOImporting
     {
         private readonly IBusinessPOImporting businessPOImporting;
@@ -21,13 +23,13 @@ namespace ES.Shared.Services.Controllers.CDSS
         }
 
         [HttpPost]
-        public PoImportResponseDto PoImporting()
+        public PoImportResponseDto PoImporting(string FilePath)
         {
             PoImportResponseDto poImportResponseDto = new PoImportResponseDto();
 
             try
             {
-                poImportResponseDto = businessPOImporting.PoImporting();
+                poImportResponseDto = businessPOImporting.PoImporting(FilePath);
                 poImportResponseDto.ServiceResponseStatus = 1;
 
             }
