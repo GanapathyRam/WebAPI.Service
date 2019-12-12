@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Excel">
-      <HintPath>..\..\..\Velan\VelanWeb\VV\bin\Excel.dll</HintPath>
+    <Reference Include="Excel, Version=2.1.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Librar\Excel.dll</HintPath>
     </Reference>
     <Reference Include="SS.Framework.Exceptions">
       <HintPath>..\References\SS.Framework.Exceptions.dll</HintPath>
